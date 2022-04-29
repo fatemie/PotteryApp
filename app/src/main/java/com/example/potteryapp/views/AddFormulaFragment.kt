@@ -8,12 +8,17 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.potteryapp.R
 import com.example.potteryapp.databinding.FragmentAddFormulaBinding
 import com.example.potteryapp.model.Formula
 import com.example.potteryapp.model.Item
 import com.example.potteryapp.repository.FormulasRepository
+import com.example.potteryapp.viewModels.MainViewModel
 
 class AddFormulaFragment : Fragment() {
+    private val vModel: MainViewModel by activityViewModels()
     lateinit var binding: FragmentAddFormulaBinding
     var llList = listOf<LinearLayout>()
     var nameEditTextLst = listOf<EditText>()
@@ -44,11 +49,11 @@ class AddFormulaFragment : Fragment() {
             binding.ll9, binding.ll10
         )
         nameEditTextLst = listOf(
-        binding.editTextName1, binding.editTextName2,
-        binding.editTextName3, binding.editTextName4,
-        binding.editTextName5, binding.editTextName6,
-        binding.editTextName7, binding.editTextName8,
-        binding.editTextName9, binding.editTextName10
+            binding.editTextName1, binding.editTextName2,
+            binding.editTextName3, binding.editTextName4,
+            binding.editTextName5, binding.editTextName6,
+            binding.editTextName7, binding.editTextName8,
+            binding.editTextName9, binding.editTextName10
         )
         amountEditTextLst = listOf(
             binding.editTextAmount1, binding.editTextAmount2,
@@ -85,13 +90,23 @@ class AddFormulaFragment : Fragment() {
                 )
                 itemLst.add(item)
             }
-            val newFormula = Formula(binding.editTextFormulaNumber.text.toString().toInt(), "", itemCount, itemLst )
+            val newFormula = Formula(
+                binding.editTextFormulaNumber.text.toString().toInt(),
+                "",
+                itemCount,
+                itemLst
+            )
             FormulasRepository.insertFormula(newFormula)
-
+            goBackToHomeFragment()
 
         }
 
 
+    }
+
+    private fun goBackToHomeFragment() {
+        vModel.updateLst()
+        findNavController().navigate(R.id.action_addFormulaFragment_to_homeFragment)
     }
 
 }

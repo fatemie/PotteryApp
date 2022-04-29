@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -200,7 +200,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -239,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -278,7 +278,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -317,7 +317,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -356,7 +356,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -395,7 +395,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText
@@ -434,7 +434,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="مقدار ماده"
-                android:inputType="text"
+                android:inputType="number"
                 android:layout_weight="1" />
 
             <EditText

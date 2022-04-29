@@ -20,6 +20,7 @@ class FormulaAdapter(var onFormulasClicked : FormulaClickHandler) :
         var btnFormula = view.findViewById<TextView>(R.id.buttonFormula)
 
         fun bind(formula : Formula, onFormulaClicked: FormulaClickHandler){
+            btnFormula.text = formula.id.toString()
             btnFormula.setOnClickListener {
                 onFormulaClicked(formula)
             }

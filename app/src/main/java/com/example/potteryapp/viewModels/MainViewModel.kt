@@ -11,4 +11,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         FormulasRepository.initDB(app.applicationContext)
         formulas = FormulasRepository.getAllFormulas()!!
     }
+    fun updateLst(){
+        formulas = FormulasRepository.getAllFormulas()!!
+    }
 }
