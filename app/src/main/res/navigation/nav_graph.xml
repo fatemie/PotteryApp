@@ -9,5 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.example.potteryapp.views.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addFormulaFragment"
+            app:destination="@id/addFormulaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFormulaFragment"
+        android:name="com.example.potteryapp.views.AddFormulaFragment"
+        android:label="fragment_add_formula"
+        tools:layout="@layout/fragment_add_formula" />
 </navigation>
