@@ -26,10 +26,11 @@
                     android:id="@+id/Search"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="شماره فرمول"/>
+                    android:hint="شماره فرمول"
+                    android:inputType="number"/>
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/buttonRegister"
+                    android:id="@+id/buttonSearch"
                     app:cornerRadius="100dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -53,7 +54,7 @@
             android:layout_marginEnd="12dp"
             android:background="@color/purple_200"
             android:text="لیست فرمول ها"
-            android:textSize="20sp"
+            android:textSize="15sp"
             tools:layout_editor_absoluteX="84dp"
             tools:layout_editor_absoluteY="305dp" />
 

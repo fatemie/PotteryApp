@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.potteryapp.FormulaAdapter
@@ -14,6 +15,7 @@ import com.example.potteryapp.model.Formula
 import com.example.potteryapp.viewModels.MainViewModel
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.example.potteryapp.repository.FormulasRepository
 
 
 class HomeFragment : Fragment() {
@@ -38,6 +40,16 @@ class HomeFragment : Fragment() {
     private fun setListener() {
         binding.fab.setOnClickListener{
             goToAddFragment()
+        }
+        binding.buttonSearch.setOnClickListener {
+            val id = binding.Search.text.toString()
+            val idInt = Integer.parseInt(id)
+            if(FormulasRepository.getFormulaWithID(idInt) != null){
+                FormulasRepository.getFormulaWithID(idInt)?.let { it1 -> goToFormulaDetail(it1) }
+            }else{
+                Toast.makeText(activity, "کد مورد نظر موجود نیست", Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 
