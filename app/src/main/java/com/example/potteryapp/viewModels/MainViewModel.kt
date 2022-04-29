@@ -16,20 +16,20 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         formulas = FormulasRepository.getAllFormulas()!!
     }
 
-    fun calculateTotalAmount(formula: Formula) : Int{
-        var totalAmount = 0
+    fun calculateTotalAmount(formula: Formula) : Double {
+        var totalAmount = 0.0
         for(item in formula.Compounds){
-            totalAmount+= item.amount
+            totalAmount += item.amount
         }
         return totalAmount
     }
 
-    fun calculateNewAmount(newTotalAmount : Int, lastTotalAmount : Int, amount : Int ):Int{
+    fun calculateNewAmount(newTotalAmount : Double, lastTotalAmount : Double, amount : Double ):Double{
         return amount/lastTotalAmount * newTotalAmount
     }
-    fun createNewFormula(formula: Formula,newTotalAmount : Int ): Formula{
+    fun createNewFormula(formula: Formula,newTotalAmount : Double ): Formula{
         val lastTotalAmount = calculateTotalAmount(formula)
-        var newAmount = 0
+        var newAmount = 0.0
         var newItemLst = arrayListOf<Item>()
         for (item in formula.Compounds){
             newAmount = calculateNewAmount(newTotalAmount,lastTotalAmount,item.amount)

@@ -85,7 +85,7 @@ class AddFormulaFragment : Fragment() {
                 var item = Item(
                     i,
                     nameEditTextLst[i].text.toString(),
-                    amountEditTextLst[i].text.toString().toInt(),
+                    amountEditTextLst[i].text.toString().toDouble(),
                     descriptionEditTextLst[i].text.toString()
                 )
                 itemLst.add(item)
