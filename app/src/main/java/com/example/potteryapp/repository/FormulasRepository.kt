@@ -21,4 +21,9 @@ object FormulasRepository {
     fun getAllFormulas() : List<Formula>? {
         return dao?.getAllFormulas()
     }
+
+
+    fun getFormulaWithID(id : Int) : Formula?{
+        return dao?.getFormulaWithID(id)
+    }
 }

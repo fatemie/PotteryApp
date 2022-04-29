@@ -14,4 +14,12 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     fun updateLst(){
         formulas = FormulasRepository.getAllFormulas()!!
     }
+
+    fun calculateTotalAmount(formula: Formula) : Int{
+        var totalAmount = 0
+        for(item in formula.Compounds){
+            totalAmount+= item.amount
+        }
+        return totalAmount
+    }
 }

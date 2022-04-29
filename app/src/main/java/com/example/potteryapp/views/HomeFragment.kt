@@ -12,6 +12,9 @@ import com.example.potteryapp.R
 import com.example.potteryapp.databinding.FragmentHomeBinding
 import com.example.potteryapp.model.Formula
 import com.example.potteryapp.viewModels.MainViewModel
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+
 
 class HomeFragment : Fragment() {
     private val vModel: MainViewModel by activityViewModels()
@@ -49,6 +52,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun goToFormulaDetail(formula: Formula) {
-
+        val action = HomeFragmentDirections.actionHomeFragmentToFormulaDetailFragment(formula.id)
+        findNavController().navigate(action)
     }
 }

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_addFormulaFragment"
             app:destination="@id/addFormulaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_formulaDetailFragment"
+            app:destination="@id/formulaDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFormulaFragment"
@@ -22,5 +25,14 @@
         <action
             android:id="@+id/action_addFormulaFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formulaDetailFragment"
+        android:name="com.example.potteryapp.views.FormulaDetailFragment"
+        android:label="fragment_formula_detail"
+        tools:layout="@layout/fragment_formula_detail">
+        <argument
+            android:name="formulaId"
+            app:argType="integer" />
     </fragment>
 </navigation>
