@@ -8,6 +8,9 @@
             name="totalAmount"
             type="String" />
     </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +31,8 @@
             android:textSize="20sp"
             tools:layout_editor_absoluteX="84dp"
             tools:layout_editor_absoluteY="305dp" />
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -64,6 +69,8 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
     </androidx.recyclerview.widget.RecyclerView>
 
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,6 +103,474 @@
             app:cornerRadius="100sp"
             tools:layout_editor_absoluteX="165dp"
             tools:layout_editor_absoluteY="431dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40sp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDelete"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="حذف"
+                android:textAllCaps="false"
+                app:cornerRadius="100sp"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="431dp"
+                android:layout_weight="1"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEdit"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ویرایش"
+                android:textAllCaps="false"
+                app:cornerRadius="100sp"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="431dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16sp"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/teal_200">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="توضیحات" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="مقدار ماده" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="نام ماده"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/editTextDescription10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="توضیحات"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextAmount10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="مقدار ماده"
+                    android:inputType="number"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/editTextName10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="نام ماده"
+                    android:inputType="text"
+                    tools:layout_editor_absoluteX="124dp"
+                    tools:layout_editor_absoluteY="425dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRegister"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ثبت تغییرات"
+                android:textAllCaps="false"
+                app:cornerRadius="100sp"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="431dp" />
+        </LinearLayout>
+
     </LinearLayout>
+    </ScrollView>
 
 </layout>

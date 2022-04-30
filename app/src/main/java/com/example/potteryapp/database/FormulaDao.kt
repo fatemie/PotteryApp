@@ -1,14 +1,12 @@
 package com.example.potteryapp.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.example.potteryapp.model.Formula
 
 @Dao
 interface FormulaDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg formula: Formula)
 
     @Query("SELECT * FROM Formula")
@@ -16,4 +14,7 @@ interface FormulaDao {
 
     @Query("SELECT * FROM Formula WHERE id IN (:id)")
     fun getFormulaWithID(id: Int): Formula
+
+    @Delete
+    fun delete(vararg formula: Formula)
 }

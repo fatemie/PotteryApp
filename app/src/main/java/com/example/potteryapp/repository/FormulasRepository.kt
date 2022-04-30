@@ -26,4 +26,8 @@ object FormulasRepository {
     fun getFormulaWithID(id : Int) : Formula?{
         return dao?.getFormulaWithID(id)
     }
+
+    fun deleteFormula(formula: Formula){
+        dao?.delete(formula)
+    }
 }

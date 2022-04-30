@@ -34,5 +34,8 @@
         <argument
             android:name="formulaId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_formulaDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

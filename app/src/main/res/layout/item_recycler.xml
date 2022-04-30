@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
@@ -7,6 +8,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@color/teal_200">
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:icon="@drawable/ic_baseline_delete_24"-->
+<!--            android:backgroundTint="@color/cardview_shadow_end_color"/>-->
+
 
         <TextView
             android:id="@+id/tvDescription"
@@ -32,6 +40,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="نام ماده"/>
+
+
 
     </LinearLayout>
 
