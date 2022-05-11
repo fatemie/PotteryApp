@@ -17,14 +17,17 @@ import com.example.potteryapp.model.Formula
 import com.example.potteryapp.model.Item
 import com.example.potteryapp.repository.FormulasRepository
 import com.example.potteryapp.viewModels.MainViewModel
+import com.google.android.material.button.MaterialButton
 
 class FormulaDetailFragment : Fragment() {
     private val vModel: MainViewModel by activityViewModels()
     lateinit var binding: FragmentFormulaDetailBinding
+    var deletedItems = arrayListOf<Int>()
     var llList = listOf<LinearLayout>()
     var nameEditTextLst = listOf<EditText>()
     var amountEditTextLst = listOf<EditText>()
     var descriptionEditTextLst = listOf<EditText>()
+    var deleteBtnLst = listOf<MaterialButton>()
     var formulaId = 0
     var flagEdit = false
     lateinit var formula: Formula
@@ -73,6 +76,12 @@ class FormulaDetailFragment : Fragment() {
             binding.llEdit.isVisible = false
             flagEdit = false
         }
+
+        for(i in 0 .. formula.itemCount){
+            deleteBtnLst[i].setOnClickListener {
+                itemDelete(i)
+            }
+        }
     }
 
     private fun initList() {
@@ -115,6 +124,13 @@ class FormulaDetailFragment : Fragment() {
             binding.editTextDescription7, binding.editTextDescription8,
             binding.editTextDescription9, binding.editTextDescription10
         )
+        deleteBtnLst = listOf(
+            binding.btnItemDelete1, binding.btnItemDelete2,
+            binding.btnItemDelete3, binding.btnItemDelete4,
+            binding.btnItemDelete5, binding.btnItemDelete6,
+            binding.btnItemDelete7, binding.btnItemDelete8,
+            binding.btnItemDelete9, binding.btnItemDelete10
+        )
 
     }
 
@@ -133,6 +149,9 @@ class FormulaDetailFragment : Fragment() {
     fun updateFormula(){
         var itemLst = arrayListOf<Item>()
         for (i in 0..formula.itemCount) {
+            if(deletedItems.contains(i)){
+                continue
+            }
             var item = Item(
                 i,
                 nameEditTextLst[i].text.toString(),
@@ -144,12 +163,18 @@ class FormulaDetailFragment : Fragment() {
         val updateFormula = Formula(
             formula.id,
             formula.name,
-            formula.itemCount,
+            itemLst.size - 1,
             itemLst
         )
         FormulasRepository.insertFormula(updateFormula)
         formula = FormulasRepository.getFormulaWithID(formulaId)!!
         initList()
+        deletedItems.clear()
+    }
+
+    fun itemDelete(i : Int){
+        llList[i].isVisible = false
+        deletedItems.add(i)
     }
 
 

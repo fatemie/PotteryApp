@@ -175,6 +175,16 @@
                 android:orientation="horizontal"
                 android:visibility="gone">
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
+
                 <EditText
                     android:id="@+id/editTextDescription1"
                     android:layout_width="match_parent"
@@ -213,6 +223,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription2"
@@ -252,6 +271,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription3"
@@ -292,6 +320,16 @@
                 android:orientation="horizontal"
                 android:visibility="gone">
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
+
                 <EditText
                     android:id="@+id/editTextDescription4"
                     android:layout_width="match_parent"
@@ -330,6 +368,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription5"
@@ -369,6 +416,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription6"
@@ -408,6 +464,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription7"
@@ -447,6 +512,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription8"
@@ -486,6 +560,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription9"
@@ -525,6 +608,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnItemDelete10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:backgroundTint="@color/red"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="1dp"/>
 
                 <EditText
                     android:id="@+id/editTextDescription10"
